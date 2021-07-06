@@ -1,0 +1,9 @@
+{% extends 'products/base.html' %}
+{% block content %}
+<h1>SignUp</h1>
+<form class="signup-form" method="post" action="">
+    {% csrf_token %}
+    {{form|linebreaks}}
+    <input type="submit" name="Submit">
+</form>
+{% endblock %}

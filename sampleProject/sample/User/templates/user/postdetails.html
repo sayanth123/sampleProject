@@ -1,0 +1,26 @@
+{% extends 'products/base.html' %}
+{% block content %}
+
+<div class="text-center">
+  <br>
+  <h1>Posts</h1>
+  <br><br>
+</div>
+
+
+<div class="grid-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); grid-gap: 20px">
+    {% for i in item %}
+    <div class="card-group">
+  <div class="card text-center">
+    <div class="card-body">
+        <h5 class="card-title"><b style="color:red"> text:</b>{{i.text}}</h5>
+      <p class="card-text">Author: {{i.user}}</p>
+        <p class="card-text"><small class="text-muted">Created {{i.created_at}}</small></p>
+      <p class="card-text"><small class="text-muted">Last updated {{i.updated_at}}</small></p>
+<!--      <a href="#"><button type="button" class="btn btn-dark">View</button></a>-->
+    </div>
+  </div>
+</div>
+    {% endfor %}
+{% endblock %}
+

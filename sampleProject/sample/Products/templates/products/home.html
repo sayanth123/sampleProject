@@ -1,0 +1,46 @@
+{% extends 'products/base.html' %}
+{% block content %}
+
+<div class="text-center">
+  <br>
+  <h1>Product List</h1>
+  <br><br>
+</div>
+
+
+<div class="grid-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); grid-gap: 20px">
+    {% for i in item %}
+    <div class="card-group">
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">{{i.name}}</h5>
+      <p class="card-text">Weight :{{i.weight}}</p>
+        <p class="card-text">Price :{{i.weight}}</p>
+        <p class="card-text"><small class="text-muted">Created {{i.created_at}}</small></p>
+      <p class="card-text"><small class="text-muted">Last updated {{i.updated_at}}</small></p>
+<!--      <a href="#"><button type="button" class="btn btn-dark">View</button></a>-->
+    </div>
+  </div>
+</div>
+    {% endfor %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--{%for i in item %}-->
+<!--<h1>{{i.name}}</h1>-->
+<!--<h1>{{i.price}}</h1>-->
+<!--<h1>{{i.created_at}}</h1>-->
+<!--<h1>{{i.updated_at}}</h1>-->
+<!--{% endfor %}-->
